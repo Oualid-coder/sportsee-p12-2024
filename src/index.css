@@ -1,0 +1,84 @@
+/* src/index.css */
+
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FBFBFB;
+}
+
+.chart {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Header */
+.header {
+  padding: 20px;
+  background-color: #FF0101;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.header .user-name {
+  color: #E60000;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100vh;
+  background-color: #020203;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Nutrition Info */
+.nutrition-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.nutrition-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  text-align: center;
+}
+
+/* Score Chart */
+.score-chart {
+  position: relative;
+}
+
+.score-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 24px;
+}

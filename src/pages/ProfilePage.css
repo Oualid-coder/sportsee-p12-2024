@@ -1,0 +1,213 @@
+/* src/pages/ProfilePage.css */
+
+.profile-page {
+  display: flex;
+  flex-direction: column; /* Assurer une direction colonne pour que le header reste au-dessus */
+  height: 100vh;
+}
+
+.sidebar {
+  width: 80px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.content {
+  display: flex; /* Flex pour organiser charts et nutrition */
+  flex-direction: row; /* Aligner les charts à gauche et les infos nutritionnelles à droite */
+  flex-grow: 1;
+  padding: 20px 40px;
+  gap: 20px; /* Espace entre les charts et les infos nutritionnelles */
+}
+
+.header {
+  background-color: #f4f4f4;
+  padding: 20px 40px;
+  color: #FF0101;
+  margin-left: 5%;
+  width: 100%;
+  background-color:white;
+  margin-bottom:0;
+  margin-top:3%;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.header p {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.charts {
+  display: flex;
+  margin-left:7%;
+  flex: 2; /* Occuper 2/3 de la largeur */
+  gap: 20px;
+}
+
+.nutrition-info {
+  flex: 1; /* Occuper 1/3 de la largeur */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.activity-chart {
+  grid-column: span 3;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  margin-left:7%;
+  padding: 20px;
+  height: 350px; /* Utilisation de pixels fixes pour stabiliser la hauteur */
+  width: 100%; /* Laisser l'élément prendre toute la largeur disponible */
+}
+
+.sessions-chart {
+  width: 100%; /* Assure que le graphique prend toute la largeur du conteneur */
+  height: 250px;
+  background-color: #E60000;
+  border-radius: 5px;
+  padding: 20px; /* Augmente un peu le padding pour éviter que le graphique soit trop proche des bords */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Assure que le titre est aligné correctement */
+}
+
+
+
+.chartaverage-sessions-title {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left; /* Aligner à gauche */
+  margin-left: 20px; /* Espacement avec le bord gauche */
+}
+
+
+.wrapper-activity-charts{
+display:flex;
+flex-direction:column;
+}
+
+
+.performance-chart {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  background-color:#5b5858;
+  height: 250px; /* ou la hauteur que tu préfères */
+  width: 100%;
+  position: relative;
+}
+
+
+.score-chart {
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  padding: 20px;
+  height: 250px;
+  width: 100%;
+}
+
+
+.nutrition-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nutrition-item img {
+  margin-right: 10px;
+}
+
+.nutrition-item p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.activity-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Le conteneur parent pour aligner le titre et la légende */
+.chart-header {
+  display: flex;
+  justify-content: space-between; /* Titre à gauche et légende à droite */
+  align-items: center; /* Assure que les deux éléments sont verticalement alignés */
+  margin-bottom: 20px; /* Espace sous l'en-tête pour séparer des graphiques */
+}
+
+.legend {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-color {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%; /* Ajoute cette ligne pour rendre les éléments circulaires */
+}
+
+
+.legend-text {
+  font-size: 14px;
+  color: #74798C;
+}
+
+
+.score-chart {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Assure une taille fixe pour le conteneur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-title {
+  position: absolute;
+  top: 10px; /* Ajuste la position du texte en haut */
+  left: 20px; /* Espacement à gauche pour bien aligner */
+  font-size: 18px;
+  font-weight: bold;
+  color: #20253A; /* Couleur noire ou similaire */
+}
+
+.score-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #282D30;
+}

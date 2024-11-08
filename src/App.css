@@ -1,0 +1,108 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #FBFBFB;
+  color: #333;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 100px;
+  background-color: #020203;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+
+/* Content area */
+.content {
+  display: grid;
+  grid-template-columns: 60% 1fr; /* 60% pour la zone des charts, 40% pour nutrition-info */
+  grid-template-rows: auto auto; /* Hauteur automatique pour les lignes */
+  gap: 20px;
+  margin-left: 100px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 60px; /* Leave space for the navbar */
+}
+
+/* Daily activity */
+.daily-activity {
+  grid-column: 1 / 2; /* Occupe la première colonne */
+  grid-row: 1 / 2; /* Première ligne */
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Limiter à 50% de la largeur disponible */
+  height: 30vh; /* Hauteur dynamique */
+}
+
+/* Score chart */
+.score-chart {
+  grid-column: 1 / 2; /* Même colonne que daily activity */
+  grid-row: 2 / 3; /* Deuxième ligne */
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 25vh; /* Limiter la hauteur */
+  width: 50%; /* Réduction de la largeur à 50% */
+}
+
+/* Nutrition Info (à droite, occupant la hauteur totale des deux autres charts) */
+.nutrition-info {
+  grid-column: 2 / 3; /* Colonne à droite */
+  grid-row: 1 / 3; /* Occupe la hauteur des deux lignes */
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Grid for other charts (sessions, performance) */
+.charts {
+  margin-left:7%;
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Espacement constant entre les charts */
+}
+
+.chart {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Laisser les charts remplir leur conteneur */
+  width: 100%; /* Assurer qu'ils prennent bien toute la largeur disponible */
+}
+
+
